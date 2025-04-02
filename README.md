@@ -1,1 +1,1 @@
-GoIT. React homework 01
+GoIT. React homework 02. Event. State of the component
