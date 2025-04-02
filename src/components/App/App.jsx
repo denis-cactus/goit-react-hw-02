@@ -1,4 +1,4 @@
-import styles from './App.module.css';
+import css from './App.module.css';
 import { useEffect, useState } from 'react';
 import Description from '../Description/Description.jsx';
 import Options from '../Options/Options.jsx';
@@ -21,13 +21,13 @@ const App = () => {
   useEffect(() => {
     localStorage.setItem(localStorageKey, JSON.stringify(rating));
   }, [rating]);
-  const updateRating = (type) => {
+  const updateFeedback = (feedbackType) => {
     setRating((prev) => ({
       ...prev,
-      [type]: prev[type] + 1,
+      [feedbackType]: prev[feedbackType] + 1,
     }));
   };
-  const resetRating = () => {
+  const resetFeedback = () => {
     setRating({
       good: 0,
       neutral: 0,
@@ -38,11 +38,11 @@ const App = () => {
   const totalFeedback = rating.good + rating.neutral + rating.bad;
 
   return (
-    <div className={styles.appContainer}>
+    <div className={css.appContainer}>
       <Description />
       <Options
-        updateRating={updateRating}
-        resetRating={resetRating}
+        updateFeedback={updateFeedback}
+        resetFeedback={resetFeedback}
         totalFeedback={totalFeedback}
       />
       {totalFeedback > 0 ? (
