@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@denis-mahei/custom-normalizer": "^1.0.6",
     "clsx": "^2.1.1",
     "eslint-plugin-react": "^7.37.4",
     "modern-normalize": "^3.0.1",
